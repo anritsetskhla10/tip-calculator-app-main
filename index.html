@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+     <title>tip calculator app main</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+    <img src="./images/logo.svg" alt="logo">
+</header>
+
+
+<main>
+    <div class="card">
+        <section class="input-container">
+            <div class="bill">
+                <label class="label-bill">Bill</label>
+                <input type="number" class="bill-input" placeholder="0">
+
+            </div>
+
+            <div class="select-tip">
+                <label class="label-tip" >Select Tip %</label>
+                <div class="select-buttons">
+                  <button class="tip">5%</button>
+                  <button class="tip">10%</button>
+                  <button class="tip">15%</button>
+                  <button class="tip">25%</button>
+                  <button class="tip">50%</button>
+                  <input class="tip"  placeholder="Custom">
+                </div>
+              </div>
+
+              <div class="people">
+                <label >Number of People <span class="errorMessage"></span></label>
+                <input class="people-input" placeholder="0" >
+              </div>
+        </section>
+        
+        <section class="result-section">
+            
+            <div class="tip-amount">
+                
+                <div class="info">
+                  Tip Amount <br />
+                  <span>/ person </span>
+                </div>
+                <div class="result tip-result" >
+                  $0.00
+                </div>
+            </div>
+    
+              <div class="total-amount">
+                <div class="info">
+                  Total <br />
+                  <span> / person </span>
+                </div>
+                <div class="result total-result" >
+                  $0.00
+                </div>
+            </div>
+    
+              <div class="reset-section">
+                <button class="reset">RESET</button>
+              </div>
+        </section>
+        
+    </div>
+
+
+</main>
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>
