@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let numberOfPeople = parseFloat(people.value);
 
+
       if (numberOfPeople <= 0) {
           errorMessage.textContent = 'Can’t be zero';
           people.classList.add('people-error');
@@ -36,13 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           errorMessage.textContent = '';
       }
+        if(billAmount && tipPercentage && numberOfPeople ){
 
+            let tipAmount = (billAmount * tipPercentage) / 100 / numberOfPeople;
+            let totalPerPerson = billAmount / numberOfPeople + tipAmount;
       
-      let tipAmount = (billAmount * tipPercentage) / 100 / numberOfPeople;
-      let totalPerPerson = billAmount / numberOfPeople + tipAmount;
-
-      tipResult.textContent = `$${tipAmount.toFixed(2)}`;
-      totalResult.textContent = `$${totalPerPerson.toFixed(2)}`;
+            tipResult.textContent = `$${tipAmount.toFixed(2)}`;
+            totalResult.textContent = `$${totalPerPerson.toFixed(2)}`;
+        }
+      
+     
   }
 
   function resetCalculator() {
